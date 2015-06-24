@@ -1,0 +1,6 @@
+{# form.html.twig: mon template pour formulaire#}
+<form method="post" {{ form_enctype(form) }}>
+    {{ form_widget(form) }}  {#Permet d'afficher ce qui est passé en paramètre#}
+    <br /><br />
+    <input type="submit" />
+</form>

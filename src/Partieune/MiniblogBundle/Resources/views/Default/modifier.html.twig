@@ -1,0 +1,8 @@
+{# modifier.html.twig: stucture de ma page de modification#}
+{% extends "PartieuneMiniblogBundle::layout.html.twig" %}
+{% block title %}{{parent()}} - modification d'un message{% endblock %}
+{% block miniblog_body %}
+    <h2>Ajout d'un message</h2>
+    {% include "PartieuneMiniblogBundle:Default:form.html.twig" %}
+
+{% endblock %}

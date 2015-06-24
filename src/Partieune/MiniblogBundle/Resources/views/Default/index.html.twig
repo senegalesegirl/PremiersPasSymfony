@@ -1,0 +1,25 @@
+{# index.html.twig: stucture de ma page d'accueil#}
+{% extends "PartieuneMiniblogBundle::layout.html.twig" %}
+{% block title %}{{parent()}} - liste des messages{% endblock %}
+
+{% block miniblog_body %}
+    <h2>Liste des messages</h2>
+    <p>
+
+        {% for message in  messages %}
+            {{message.ladate|date('d/m/Y')}}
+            <a href="{{ path('partieune_miniblog_afficher', {'id': message.id}) }}">  {{ message.titre }} </a> <t/>
+            (par {{message.auteur}})
+            <a href="{{ path('partieune_miniblog_supprimer', {'id': message.id}) }}"> Supprimer</a>
+            <a href="{{ path('partieune_miniblog_modifier', {'id': message.id}) }}">  Modifier </a>
+
+            <br />
+
+        {% endfor %}
+
+    </p>
+
+
+{% endblock %}
+
+

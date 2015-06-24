@@ -1,0 +1,32 @@
+partieune_miniblog_homepage:
+    path:     /miniblog/
+    defaults: { _controller: PartieuneMiniblogBundle:Default:index }
+
+partieune_miniblog_afficher:
+    path:     /miniblog/afficher/{id}
+    defaults: { _controller: PartieuneMiniblogBundle:Default:afficher }
+    requirements:
+      id: \d+
+
+
+partieune_miniblog_ajouter:
+    path:     /miniblog/ajouter
+    defaults: { _controller: PartieuneMiniblogBundle:Default:ajouter }
+
+partieune_miniblog_modifier:
+    path:     /miniblog/modifier/{id}
+    defaults: { _controller: PartieuneMiniblogBundle:Default:modifier }
+    requirements:
+          id: \d+
+
+
+partieune_miniblog_supprimer:
+    path:     /miniblog/supprimer/{id}
+    defaults: { _controller: PartieuneMiniblogBundle:Default:supprimer }
+    requirements:
+          id: \d+
+
+
+partieune_miniblog_afficherAll:
+    path:     /miniblog/afficherAll
+    defaults: { _controller: PartieuneMiniblogBundle:Default:afficherAll }

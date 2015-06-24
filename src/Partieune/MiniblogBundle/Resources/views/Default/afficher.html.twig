@@ -1,0 +1,16 @@
+{# afficher.html.twig: stucture d'affichage des messages#}
+{% extends "PartieuneMiniblogBundle::layout.html.twig" %}
+{% block title %}{{parent()}} - Message{% endblock %}
+
+{% block miniblog_body %}
+    <h2>Le message </h2>
+
+   Date :  {{lemessage.ladate|date('d/m/Y')}}  <br/>
+   Titre : {{ lemessage.titre }}  <br/>
+   Auteur :  {{lemessage.auteur}}   <br/>  <br/>  <br/>
+    Contenu:  <br/>
+    <p>
+    {{lemessage.contenu}}
+    </p>
+
+{% endblock %}
